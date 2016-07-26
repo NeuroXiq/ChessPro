@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15FDCF11-3C1B-4955-AD3B-DDA6636FF471}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChessPro.GUI</RootNamespace>
+    <AssemblyName>ChessPro.GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlPiecePair.cs" />
+    <Compile Include="DragableControl.cs" />
+    <Compile Include="DragableControlPiecePair.cs" />
+    <Compile Include="EngineCommunicationViewPresenter.cs" />
+    <Compile Include="EngineOptionControls\EngineButtonOption.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EngineOptionControls\EngineButtonOption.Designer.cs">
+      <DependentUpon>EngineButtonOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EngineOptionControls\EngineCheckOption.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EngineOptionControls\EngineCheckOption.Designer.cs">
+      <DependentUpon>EngineCheckOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EngineOptionControls\EngineComboOption.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EngineOptionControls\EngineComboOption.Designer.cs">
+      <DependentUpon>EngineComboOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EngineOptionControls\EngineSpinOption.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EngineOptionControls\EngineSpinOption.Designer.cs">
+      <DependentUpon>EngineSpinOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EngineOptionControls\EngineStringOption.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EngineOptionControls\EngineStringOption.Designer.cs">
+      <DependentUpon>EngineStringOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EngineOptionControls\IEngineOptionControl.cs" />
+    <Compile Include="EngineCommunicationWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EngineCommunicationWindow.Designer.cs">
+      <DependentUpon>EngineCommunicationWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IEngineCommunicationView.cs" />
+    <Compile Include="IEngineCommunicationViewPresenter.cs" />
+    <Compile Include="IMainView.cs" />
+    <Compile Include="IMainViewPresenter.cs" />
+    <Compile Include="MainViewPresenter.cs" />
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PieceComponent.cs" />
+    <Compile Include="ProgramMain.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchProperties.cs" />
+    <EmbeddedResource Include="EngineOptionControls\EngineButtonOption.resx">
+      <DependentUpon>EngineButtonOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EngineOptionControls\EngineCheckOption.resx">
+      <DependentUpon>EngineCheckOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EngineOptionControls\EngineComboOption.resx">
+      <DependentUpon>EngineComboOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EngineOptionControls\EngineSpinOption.resx">
+      <DependentUpon>EngineSpinOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EngineOptionControls\EngineStringOption.resx">
+      <DependentUpon>EngineStringOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EngineCommunicationWindow.resx">
+      <DependentUpon>EngineCommunicationWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChessPro.Resources\ChessPro.Resources.csproj">
+      <Project>{1271af44-86c1-48b7-ba76-6e186ce5e298}</Project>
+      <Name>ChessPro.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\black_bishop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\black_king.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\black_pawn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\black_queen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\black_rook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\bn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\white_bishop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\white_king.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\white_kinght.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\white_pawn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\white_queen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\white_rook.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
